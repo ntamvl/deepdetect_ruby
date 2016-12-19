@@ -63,7 +63,7 @@ Put your Ruby code in the file `lib/deepdetect_ruby`. To experiment with that co
 **Add this line to your application's Gemfile:**
 
 ```ruby
-gem 'deepdetect_ruby', git: "git@github.com:pixai/deepdetect-ruby.git"
+gem 'deepdetect_ruby', git: "git@github.com:ntamvl/deepdetect_ruby.git"
 ```
 And then execute:
 ```
@@ -94,7 +94,7 @@ Configure on Rails at `config/application.rb`
 *for single server*
 ```ruby
 DeepdetectRuby.configure do |config|
-    config.host = "http://api.pixai.com"
+    config.host = "http://deepdetect_server_ip_or_domain:8080"
     config.model_path = "/home/tamnguyen/models"
 end
 ```
@@ -104,7 +104,7 @@ end
 DeepdetectRuby.configure do |config|
     config.model_path = "/home/tamnguyen/models"
     config.is_scaling = true
-    config.servers = "http://staging.feels.com:8080, http://127.0.0.1:8080"
+    config.servers = "http://deepdetect_server_ip_or_domain_1:8080, http://deepdetect_server_ip_or_domain_2:8080"
 end
 ```
 
@@ -115,11 +115,11 @@ config_file_path = "#{Rails.root}/config/deepdetect.json"
 model_hash = JSON.parse(File.read(config_file_path))
 model_path = model_hash["model_path"]
 DeepdetectRuby.configure do |config|
-    # config.host = "http://54.229.220.160:8080"
+    # config.host = "http://127.0.0.1:8080"
     config.model_path = "#{model_path}"
     config.debug = false
     config.is_scaling = true
-    config.servers = "http://staging.feels.com:8080, http://127.0.0.1:8080"
+    config.servers = "http://deepdetect_server_ip_or_domain_1:8080, http://deepdetect_server_ip_or_domain_2:8080"
 end
 # end load DeepDetect config
 ```
@@ -238,8 +238,8 @@ After checking out the repo, run `bin/setup` to install dependencies. You can al
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contribution
-DeepDetect Ruby gem is designed and implemented by Tam Nguyen [tam@feels.com](tam@feels.com) or [ntamvl@gmail.com](ntamvl@gmail.com)
-Bug reports and pull requests are welcome on GitHub at https://github.com/pixai/deepdetect_ruby.
+DeepDetect Ruby gem is designed and implemented by Tam Nguyen ntamvl@gmail.com](ntamvl@gmail.com)
+Bug reports and pull requests are welcome on GitHub at https://github.com/ntamvl/deepdetect_ruby.
 
 ## License
-The gem is available as a private repository under the terms of the Feels License
+The gem is available as a private repository under MIT License
