@@ -1,0 +1,28 @@
+PATH
+  remote: .
+  specs:
+    deepdetect_ruby (1.0.pre.beta)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    awesome_print (1.7.0)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    multi_xml (0.5.5)
+    rack (2.0.1)
+    rake (10.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  bundler (~> 1.11)
+  deepdetect_ruby!
+  httparty
+  rack
+  rake (~> 10.0)
+
+BUNDLED WITH
+   1.13.1
