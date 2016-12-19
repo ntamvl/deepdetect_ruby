@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "DeepdetectRuby, a library for Ruby apps"
   spec.description   = "DeepdetectRuby, a library for Ruby apps"
-  spec.homepage      = "https://github.com/ntamvl/deepdetect-ruby"
+  spec.homepage      = "https://github.com/ntamvl/deepdetect_ruby"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
